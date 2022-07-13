@@ -26,6 +26,11 @@
 		D8B38A44287D6B8300E02D38 /* DKBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A43287D6B8300E02D38 /* DKBlog.swift */; };
 		D8B38A46287D6DC600E02D38 /* SearchBlogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A45287D6DC600E02D38 /* SearchBlogAPI.swift */; };
 		D8B38A49287D6E8D00E02D38 /* SearchBlogNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A48287D6E8D00E02D38 /* SearchBlogNetwork.swift */; };
+		D8B38A4B287EA47200E02D38 /* SearchBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A4A287EA47200E02D38 /* SearchBarViewModel.swift */; };
+		D8B38A4D287EA66200E02D38 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A4C287EA66200E02D38 /* FilterViewModel.swift */; };
+		D8B38A4F287EA6D900E02D38 /* BlogListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A4E287EA6D900E02D38 /* BlogListViewModel.swift */; };
+		D8B38A51287EA7AB00E02D38 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A50287EA7AB00E02D38 /* MainViewModel.swift */; };
+		D8B38A53287EB32000E02D38 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B38A52287EB32000E02D38 /* MainModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +50,11 @@
 		D8B38A43287D6B8300E02D38 /* DKBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBlog.swift; sourceTree = "<group>"; };
 		D8B38A45287D6DC600E02D38 /* SearchBlogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogAPI.swift; sourceTree = "<group>"; };
 		D8B38A48287D6E8D00E02D38 /* SearchBlogNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogNetwork.swift; sourceTree = "<group>"; };
+		D8B38A4A287EA47200E02D38 /* SearchBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarViewModel.swift; sourceTree = "<group>"; };
+		D8B38A4C287EA66200E02D38 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		D8B38A4E287EA6D900E02D38 /* BlogListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewModel.swift; sourceTree = "<group>"; };
+		D8B38A50287EA7AB00E02D38 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		D8B38A52287EB32000E02D38 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B38A3E287D628C00E02D38 /* SearchBar */,
-				D8B38A3F287D62A800E02D38 /* BlogListview */,
+				D8B38A3F287D62A800E02D38 /* ListView */,
 			);
 			path = SubComponents;
 			sourceTree = "<group>";
@@ -125,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				D8B38A2E287D54BB00E02D38 /* MainViewController.swift */,
+				D8B38A50287EA7AB00E02D38 /* MainViewModel.swift */,
+				D8B38A52287EB32000E02D38 /* MainModel.swift */,
 				D8B38A3C287D624700E02D38 /* SubComponents */,
 			);
 			path = MainViewController;
@@ -134,26 +146,29 @@
 			isa = PBXGroup;
 			children = (
 				D8B38A30287D57BB00E02D38 /* SearchBar.swift */,
+				D8B38A4A287EA47200E02D38 /* SearchBarViewModel.swift */,
 			);
 			path = SearchBar;
 			sourceTree = "<group>";
 		};
-		D8B38A3F287D62A800E02D38 /* BlogListview */ = {
+		D8B38A3F287D62A800E02D38 /* ListView */ = {
 			isa = PBXGroup;
 			children = (
 				D8B38A34287D5D4000E02D38 /* BlogListView.swift */,
-				D8B38A40287D62B700E02D38 /* SubComponents */,
+				D8B38A4E287EA6D900E02D38 /* BlogListViewModel.swift */,
+				D8B38A36287D5D4F00E02D38 /* BlogListCell.swift */,
+				D8B38A40287D62B700E02D38 /* FilterView */,
 			);
-			path = BlogListview;
+			path = ListView;
 			sourceTree = "<group>";
 		};
-		D8B38A40287D62B700E02D38 /* SubComponents */ = {
+		D8B38A40287D62B700E02D38 /* FilterView */ = {
 			isa = PBXGroup;
 			children = (
 				D8B38A32287D5B8A00E02D38 /* FilterView.swift */,
-				D8B38A36287D5D4F00E02D38 /* BlogListCell.swift */,
+				D8B38A4C287EA66200E02D38 /* FilterViewModel.swift */,
 			);
-			path = SubComponents;
+			path = FilterView;
 			sourceTree = "<group>";
 		};
 		D8B38A47287D6DD200E02D38 /* Network */ = {
@@ -247,18 +262,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B38A4D287EA66200E02D38 /* FilterViewModel.swift in Sources */,
 				D8B38A2F287D54BB00E02D38 /* MainViewController.swift in Sources */,
 				D8B38A37287D5D4F00E02D38 /* BlogListCell.swift in Sources */,
 				D8B38A44287D6B8300E02D38 /* DKBlog.swift in Sources */,
 				D8B38A35287D5D4000E02D38 /* BlogListView.swift in Sources */,
 				D8B38A46287D6DC600E02D38 /* SearchBlogAPI.swift in Sources */,
 				D8B38A39287D5D5C00E02D38 /* BlogListCellData.swift in Sources */,
+				D8B38A4F287EA6D900E02D38 /* BlogListViewModel.swift in Sources */,
 				D8B38A31287D57BB00E02D38 /* SearchBar.swift in Sources */,
 				D8B38A0E287D536B00E02D38 /* AppDelegate.swift in Sources */,
 				D8B38A33287D5B8A00E02D38 /* FilterView.swift in Sources */,
+				D8B38A53287EB32000E02D38 /* MainModel.swift in Sources */,
 				D8B38A10287D536B00E02D38 /* SceneDelegate.swift in Sources */,
+				D8B38A4B287EA47200E02D38 /* SearchBarViewModel.swift in Sources */,
 				D8B38A49287D6E8D00E02D38 /* SearchBlogNetwork.swift in Sources */,
 				D8B38A42287D63CF00E02D38 /* AlertActionConvertible.swift in Sources */,
+				D8B38A51287EA7AB00E02D38 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
